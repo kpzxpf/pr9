@@ -1,0 +1,21 @@
+﻿<Window x:Class="Pr9.TrainingManagementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Pr9"
+        mc:Ignorable="d"
+        Title="Управление Тренировками" Height="450" Width="600">
+    <Grid>
+        <StackPanel Margin="10">
+            <Button Content="Добавить Тренировку" Width="150" Click="AddTraining_Click"/>
+            <DataGrid x:Name="DataGridTrainings" AutoGenerateColumns="False" Margin="10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50"/>
+                    <DataGridTextColumn Header="Название тренировки" Binding="{Binding name}" Width="200"/>
+                    <DataGridTextColumn Header="Тренер" Binding="{Binding trainer_name}" Width="200"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>

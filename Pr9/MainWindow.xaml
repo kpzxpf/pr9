@@ -1,0 +1,25 @@
+﻿<Window x:Class="Pr9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Спортивный клуб" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
+            <Button Content="Добавить" Width="100" Margin="5" Click="AddMember_Click"/>
+            <Button Content="Редактировать" Width="100" Margin="5" Click="EditMember_Click"/>
+            <Button Content="Удалить" Width="100" Margin="5" Click="DeleteMember_Click"/>
+            <Button Content="Управление тренировками" Width="180" Margin="5" Click="OpenTrainingManagement_Click"/>
+            <Button Content="Расписание занятий" Width="150" Margin="5" Click="OpenScheduleManagement_Click"/>
+        </StackPanel>
+
+        <DataGrid x:Name="DataGridMembers" Grid.Row="1" AutoGenerateColumns="True" Margin="10"/>
+    </Grid>
+</Window>
+
+
+
+
